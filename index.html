@@ -9,15 +9,84 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="./style.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 	</head>
 	<body>
+        <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+                    <section data-state="scanlines">
+                        <div class="container">
+                            <h1 class="glitch" data-text="XONIX">XONIX</h1>
+                        </div>
+                        <br/>
+
+                        <p>
+                        <span class="green">root@xonix</span>:<span class="blue">~</span>$ 
+                        <span id="typeAndDown" class="fragment">cat users.md</span>
+                        </p>
+
+                        <p class="fragment">
+                        Daniel<br/>
+                        Sasha<br/>
+                        Egor<br/>
+                        <br/>
+                        <span class="green">root@xonix</span>:<span class="blue">~</span>$ 
+                        <span id="typeAndDown" class="fragment">su - Daniel</span>
+                        </p>
+                    </section>
+
+                    <section data-background-image="presentation_materials/xonix.png" data-state="scanlines">
+                        <p>
+                        <span class="green">Daniel@xonix</span>:<span class="blue">~/history</span>$ 
+                        <span id="typeAndDown" class="fragment">cat wall_of_text.md</span>
+                        </p>
+                        <p class="fragment">
+                        Xonix is a video game written for MS-DOS compatible operating systems by Ilan Raab and Dani Katz
+                        <br/>
+                        <span class="green">Daniel@xonix</span>:<span class="blue">~/history</span>$ 
+                        <span id="typeAndDown" class="fragment">su - Sasha</span>
+                        </p>             
+                    </section>
+
+                    <section data-state="scanlines">
+                        <p>
+                        <span class="green">Sasha@xonix</span>:<span class="blue">~/rules</span>$ 
+                        <span id="typeAndDown" class="fragment">ls --plz-show-images</span>
+                        </p>
+
+                        <div class="fragment">
+                            <img style='height: 20%; width: 20%; object-fit: contain' src="presentation_materials/lose.png"/>
+                            <img style='height: 20%; width: 20%; object-fit: contain' src="presentation_materials/win.png"/>
+                            <img style='height: 50%; width: 50%; object-fit: contain'src="presentation_materials/demo.gif"/>
+                        
+                            <p>
+                            <span class="green">Sasha@xonix</span>:<span class="blue">~/rules</span>$ 
+                            <span id="typeAndDown" class="fragment">su - Egor</span>
+                            </p>
+                        </div>
+                    </section>
+
+                    <section data-state="scanlines">
+                        <p>
+                        <span class="green">Egor@xonix</span>:<span class="blue">~/hardware</span>$ 
+                        <span id="typeAndDown" class="fragment">grep $(important) *</span>
+                        </p>
+
+                        <div class="fragment">
+                            <img style='height: 70%; width: 70%; object-fit: contain' src="presentation_materials/hardware_mindmap.png"/>
+                        
+                            <p>
+                            <span class="green">Egor@xonix</span>:<span class="blue">~/hardware</span>$ 
+                            <span id="typeAndDown" class="fragment">su - Egor</span>
+                            </p>
+                        </div>
+                    </section>
+                </section>
 			</div>
 		</div>
 
@@ -36,5 +105,19 @@
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
+        <script>
+            Reveal.on('fragmentshown', event => {
+                if (event.fragment.id != "typeAndDown")
+                    return;
+                var me = new TypeIt(event.fragment, {
+                    html: false,
+                })
+                    .pause(300)
+                    .exec(async () => {
+                        me.destroy();
+                        Reveal.down();
+                    }).go();
+            });
+        </script>
 	</body>
 </html>
