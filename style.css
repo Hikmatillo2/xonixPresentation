@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('UbuntuMono-Regular.ttf') format('truetype');
+}
+
 p {
   text-align: left;
-  color: #d3d7cf; }
+  color: #d3d7cf; 
+  font-family: 'Ubuntu Mono';
+}
 
 .green {
   color: #4e9a06; }
