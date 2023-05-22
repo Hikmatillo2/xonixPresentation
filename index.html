@@ -31,9 +31,9 @@
                         </p>
 
                         <p class="fragment">
-                        Daniel<br/>
-                        Sasha<br/>
-                        Egor<br/>
+                        Daniel D.<br/>
+                        Alec S.<br/>
+                        Egor K.<br/>
                         <br/>
                         <span class="green">root@xonix</span>:<span class="blue">~</span>$ 
                         <span id="typeAndDown" class="fragment">su - Daniel</span>
@@ -43,19 +43,19 @@
                     <section data-background-image="presentation_materials/xonix.png" data-state="scanlines">
                         <p>
                         <span class="green">Daniel@xonix</span>:<span class="blue">~/history</span>$ 
-                        <span id="typeAndDown" class="fragment">cat wall_of_text.md</span>
+                        <span id="typeAndDown" class="fragment">cat honorable_mention.md</span>
                         </p>
                         <p class="fragment">
                         Xonix is a video game written for MS-DOS compatible operating systems by Ilan Raab and Dani Katz
                         <br/>
                         <span class="green">Daniel@xonix</span>:<span class="blue">~/history</span>$ 
-                        <span id="typeAndDown" class="fragment">su - Sasha</span>
+                        <span id="typeAndDown" class="fragment">su - Alec</span>
                         </p>             
                     </section>
 
                     <section data-state="scanlines">
                         <p>
-                        <span class="green">Sasha@xonix</span>:<span class="blue">~/rules</span>$ 
+                        <span class="green">Alec@xonix</span>:<span class="blue">~/rules</span>$ 
                         <span id="typeAndDown" class="fragment">ls --plz-show-images</span>
                         </p>
 
@@ -65,7 +65,7 @@
                             <img style='height: 50%; width: 50%; object-fit: contain'src="presentation_materials/demo.gif"/>
                         
                             <p>
-                            <span class="green">Sasha@xonix</span>:<span class="blue">~/rules</span>$ 
+                            <span class="green">Alec@xonix</span>:<span class="blue">~/rules</span>$ 
                             <span id="typeAndDown" class="fragment">su - Egor</span>
                             </p>
                         </div>
@@ -78,13 +78,98 @@
                         </p>
 
                         <div class="fragment">
-                            <img style='height: 70%; width: 70%; object-fit: contain' src="presentation_materials/hardware_mindmap.png"/>
-                        
+                            <img style='height: 80%; width: 80%; object-fit: contain' src="presentation_materials/hardware_mindmap.png"/>
+                        </div>
+                    </section>
+
+                    <section data-state="scanlines">
+                        <p>
+                        <span class="green">Egor@xonix</span>:<span class="blue">~/hardware</span>$ 
+                        <span id="typeAndDown" class="fragment">find videobuffer --plz-show</span>
+                        </p>
+
+                        <div class="fragment">
+                            <img style='height: 70%; width: 70%; object-fit: contain' src="presentation_materials/videobuffer.png"/>
+                        </div>
+                    </section>
+
+                    <section data-state="scanlines">
+                        <p>
+                        <span class="green">Egor@xonix</span>:<span class="blue">~/hardware</span>$ 
+                        <span id="typeAndDown" class="fragment">find player_movement --plz-show</span>
+                        </p>
+
+                        <div class="fragment">
+                            <img style='height: 80%; width: 80%; object-fit: contain' src="presentation_materials/player_movement.png"/>
+                        </div>
+                    </section>
+
+                    <section data-background-image="presentation_materials/bfs.gif">
+                        <p>
+                        <span class="green">Egor@xonix</span>:<span class="blue">~/hardware</span>$ 
+                        <span style="color: #2e3436;" id="typeAndDown" class="fragment">
+                            find bfs | grep $(meme)
+                        </span>
+                        </p>
+
+                        <div class="fragment">
+                            <img style='height: 80%; width: 80%; object-fit: contain' src="presentation_materials/meme.png"/>
                             <p>
                             <span class="green">Egor@xonix</span>:<span class="blue">~/hardware</span>$ 
-                            <span id="typeAndDown" class="fragment">su - Egor</span>
+                            <span id="typeAndDown" class="fragment">su - Alec</span>
                             </p>
                         </div>
+                    </section>
+
+                    <section data-state="scanlines">
+                        <p>
+                        <span class="green">Alec@xonix</span>:<span class="blue">~/software</span>$ 
+                        <span id="typeAndDown" class="fragment">grep $(game_loop)</span>
+                        </p>
+
+                        <div class="fragment">
+                            <img style='height: 20%; width: 20%; object-fit: contain' src="presentation_materials/game_loop.png"/>
+
+                        <p>
+                        <span class="green">Alec@xonix</span>:<span class="blue">~/software</span>$ 
+                        <span id="typeAndDown" class="fragment">su - Daniel</span>
+                        </p>
+                        </div>
+                    </section>
+
+                    <section data-state="scanlines">
+                        <p>
+                        <span class="green">Daniel@xonix</span>:<span class="blue">~/software</span>$ 
+                        <span id="typeAndDown" class="fragment">man memory_mapping</span>
+                        </p>
+
+                        <div class="fragment">
+                            <p style="display: inline-block;">
+                                0x00-0x04 - Player management <br/>
+                                0x05 - Override command<br/>
+                                0x06 - Coloring command<br/>
+                                0x08-0x0e - Ball management<br/>
+                                0x0f - Win condition flag<br/>
+                                0x5e - Keyboard reset command<br/>
+                                0x5f - Flush command<br/>
+                                0x60-0xdf - Display buffer<br/>
+                            </p>
+                            <img style='height: 40%; width: 40%; object-fit: contain; display=inline-block;' src="presentation_materials/memory_mapping.png"/>
+
+                        <p>
+                        <span class="green">Daniel@xonix</span>:<span class="blue">~/software</span>$ 
+                        <span id="typeAndDown" class="fragment">su -</span>
+                        </p>
+                        </div>
+                    </section>
+
+                    <section data-state="scanlines">
+                        <p>
+                        <span class="green">root@xonix</span>:<span class="blue">~</span>$ 
+                        <span id="typeAndDown" class="fragment">systemctl poweroff</span>
+                        </p>
+                    </section>
+                    <section data-background-image="presentation_materials/poweroff.png">
                     </section>
                 </section>
 			</div>
